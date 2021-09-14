@@ -1,80 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment1</title>
-    <style>
-        .container{
-            position: relative;
-            margin-left: 10vw;
-            margin-right: 10vw;
-            width: 45vw;
-            height: 45vw;
-            box-shadow:5px 5px 6px 6px palevioletred;
-            transform: translate(40%,0%);
+    <title>Assignment2</title>
 
-        }
-        .head{
-            width: 100%;
-            height: 10%;
-            background:rgb(180, 42, 118);
-            padding-left: 10px;
-            padding-top: 10px;
-            box-sizing: border-box;
-        }
-        h1{
+    <style>
+        * {
             margin: 0;
             padding: 0;
         }
-        .link{
-            position: absolute;
-            background: rgb(211, 152, 211);
-            top: 10%;
+
+        .wrapper {
+            width: 100wv;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .header {
+            width: 100%;
+            height: 10%;
+            background-color: rgb(210, 194, 221);
+            color: rgb(55, 13, 206);
+        }
+
+        .body {
+            width: 100%;
+            height: 90%;
+            background-color: rgb(241, 144, 201);
+            display: flex;
+        }
+
+        .link {
             width: 20%;
-            height: 90%;
+            height: 100%;
+            padding-left: 5px;
+            /* background-color: mediumpurple; */
         }
-        .body{
-            position: absolute;
-            background: rgb(170, 149, 170);
-            top: 10%;
+
+        .link>ol {
+            padding-left: 20px;
+        }
+
+        .main {
             width: 80%;
-            height: 90%;
-            left: 20%;
-        }
-        p{
-            margin-left: 10px;
+            height: 100%;
             text-align: justify;
-            margin-right: 10px;
+            padding: 10px;
+            background-color: rgb(182, 120, 197);
+        }
+
+        body {
+            background: rgb(217, 197, 231);
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .myvit {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 25px;
+        }
+
+        .myvit input[type="radio"] {
+            display: none;
+        }
+
+        .myvit label {
+            padding: 25px;
+            background: rgb(212, 89, 216);
+            font-weight: bold;
+
+        }
+
+        .myvit .container {
+            width: 92.6%;
+            height: 80%;
+            padding: 5px;
+            background-color: rgb(219, 101, 101);
+            order: 1;
+            display: none;
+        }
+
+        .myvit input[type='radio']:checked+label+.container {
+            display: block;
+        }
+
+        label:hover {
+            color: maroon;
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <div class="head">
-            <h1>Vitamins and Minerals</h1>
+    <div class="myvit">
+        <input type="radio" id="vit" name="myvit" checked="checked">
+        <label for="vit">Vitamins</label>
+        <div class="container">
+
+            <div class="header">
+                <h1>Vitamins and Minerals</h1>
+            </div>
+            <div class="body">
+                <div class="link">
+                    <p style="padding-top: 15px;">Related Links</p>
+                    <ol>
+                        <li style="padding-top: 10px;"><a href="link1.html"> Vitamin C</a></li><br>
+                        <li><a href="link2.html"> Vitamin D</a></li><br>
+                        <li><a href="link3.html"> Vitamin E</a></li><br>
+                    </ol>
+                </div>
+                <div class="main">
+                    <h3>Vitamins</h3>
+                    <p>Every day, your body produces skin, muscle, and bone. It churns out rich red blood that carries
+                        nutrients and oxygen to remote outposts, and it sends nerve signals skipping along thousands of
+                        miles of brain and body pathways. It also formulates chemical messengers that shuttle from one
+                        organ to another, issuing the instructions that help sustain your life.
+
+                        But to do all this, your body requires some raw materials. These include at least 30 vitamins,
+                        minerals, and dietary components that your body needs but cannot manufacture on its own in
+                        sufficient amounts.
+
+                        Vitamins and minerals are considered essential nutrients—because acting in concert, they perform
+                        hundreds of roles in the body. They help shore up bones, heal wounds, and bolster your immune
+                        system. They also convert food into energy, and repair cellular damage.
+
+                        But trying to keep track of what all these vitamins and minerals do can be confusing. Read
+                        enough articles on the topic, and your eyes may swim with the alphabet-soup references to these
+                        nutrients, which are known mainly be their initials (such as vitamins A, B, C, D, E, and K—to
+                        name just a few).</p>
+                </div>
+            </div>
         </div>
 
-        <div class="link">
-            <p>Related Links</p>
-            <ol>
-                <li><a href="link1.html"> Vitamin C</a></li><br>
-                <li><a href="link2.html"> Vitamin D</a></li><br>
-                <li><a href="link3.html"> Vitamin E</a></li><br>
-            </ol>
+
+        <input type="radio" id="vitC" name="myvit">
+        <label for="vitC">Vitamin C</label>
+        <div class="container">
+            <div class="header">
+                <h1>Vitamins C</h1>
+            </div>
+
+            <div class="body">
+                <div class="link">
+                    <p style="padding-top: 15px;">Related Links</p>
+                    <ol>
+                        <li style="padding-top: 10px;"><a href="#"> Main Page</a></li><br>
+                        <li><a href="link2.html"> Vitamin D</a></li><br>
+                        <li><a href="link3.html"> Vitamin E</a></li><br>
+                    </ol>
+                </div>
+
+                <div class="main">
+                    <h3>Vitamin C</h3>
+                    <p>Vitamin C is one of the safest and most effective nutrients, experts say. Though it may not be
+                        the cure for the common cold, the benefits of vitamin C may include protection against immune
+                        system deficiencies, cardiovascular disease, prenatal health problems, eye disease, and even
+                        skin wrinkling. The tolerable upper intake level (or the maximum amount you can take in a day
+                        that likely won’t cause harm) is 2000 mg a day for adults.
+
+                        A recent study published in Seminars in Preventive and Alternative Medicine that looked at over
+                        100 studies over 10 years revealed a growing list of possible benefits of vitamin C.
+
+                        "Vitamin C has received a great deal of attention, and with good reason. Higher blood levels of
+                        vitamin C may be the ideal nutrition marker for overall health," says study researcher Mark
+                        Moyad, MD, MPH, of the University of Michigan. "The more we study vitamin C, the better our
+                        understanding of how diverse it is in protecting our health, from cardiovascular, cancer,
+                        stroke, eye health [and] immunity to living longer."</p>
+                </div>
+            </div>
+        </div>
+        <input type="radio" id="vitD" name="mytabs">
+        <label for="vitD">Vitamin D</label>
+        <div class="container">
+
+            <div class="header">
+                <h1>Vitamin D</h1>
+            </div>
+            <div class="body">
+                <div class="link">
+                    <p style="padding-top: 15px;">Related Links</p>
+                    <ol>
+                        <li style="padding-top: 10px;"><a href="link1.html"> Vitamin C</a></li><br>
+                        <li><a href="#"> Main Page</a></li><br>
+                        <li><a href="link3.html"> Vitamin E</a></li><br>
+                    </ol>
+                </div>
+                <div class="main">
+                    <h3>Vitamins D</h3>
+                    <p>Vitamin D is sometimes called the “sunshine vitamin” because it’s produced in your skin in
+                        response to sunlight. It’s a fat-soluble vitamin in a family of compounds that includes vitamins
+                        D-1, D-2, and D-3.
+
+                        Your body produces vitamin D naturally when it’s directly exposed to sunlight. You can also get
+                        it through certain foods and supplements to ensure adequate levels of the vitamin in your blood.
+
+                        Vitamin D has several important functions. Perhaps the most vital are regulating the absorption
+                        of calcium and phosphorus, and facilitating normal immune system function. Getting a sufficient
+                        amount of vitamin D is important for normal growth and development of bones and teeth, as well
+                        as improved resistance against certain diseases.</p>
+                </div>
+            </div>
         </div>
 
-        <div class="body">
-            <h3>Vitamins</h3>
-            <p>Every day, your body produces skin, muscle, and bone. It churns out rich red blood that carries nutrients and oxygen to remote outposts, and it sends nerve signals skipping along thousands of miles of brain and body pathways. It also formulates chemical messengers that shuttle from one organ to another, issuing the instructions that help sustain your life.
+        <input type="radio" id="vitE" name="mytabs">
+        <label for="vitE">Vitamins E</label>
+        <div class="container">
 
-                But to do all this, your body requires some raw materials. These include at least 30 vitamins, minerals, and dietary components that your body needs but cannot manufacture on its own in sufficient amounts.
-                
-                Vitamins and minerals are considered essential nutrients—because acting in concert, they perform hundreds of roles in the body. They help shore up bones, heal wounds, and bolster your immune system. They also convert food into energy, and repair cellular damage.
-                
-                But trying to keep track of what all these vitamins and minerals do can be confusing. Read enough articles on the topic, and your eyes may swim with the alphabet-soup references to these nutrients, which are known mainly be their initials (such as vitamins A, B, C, D, E, and K—to name just a few).</p>
+            <div class="header">
+                <h1>Vitamin E</h1>
+            </div>
+            <div class="body">
+                <div class="link">
+                    <p style="padding-top: 15px;">Related Links</p>
+                    <ol>
+                        <li style="padding-top: 10px;"><a href="link1.html"> Vitamin C</a></li><br>
+                        <li><a href="link2.html"> Vitamin D</a></li><br>
+                        <li><a href="#"> Main Page</a></li><br>
+                    </ol>
+                </div>
+                <div class="main">
+                    <h3>Vitamin E</h3>
+                    <p>Getting the required amount of vitamin E is essential for the health of your nervous system.
+                        Vitamin E can protect your nervous system by eliminating free radicals from your body. When the
+                        levels of vitamin E decrease, you become at risk of developing vitamin E deficiency. This puts
+                        you at risk of developing brain and spinal cord health conditions. It is important to note that
+                        taking vitamin E supplements has not proven useful in preventing dementia in Alzheimer's
+                        disease, according to the latest clinical trials.</p>
+                </div>
+            </div>
         </div>
+
+        <input type="radio" id="morevit" name="myvit">
+        <label for="morevit">More</label>
+        <div class="container">
+
+            <div class="header">
+                <h1>Another Vitamins </h1>
+            </div>
+            <div class="body">
+                <div class="link">
+                    <p style="padding-top: 15px;">Related Links</p>
+                    <ol>
+                        <li style="padding-top: 10px;"><a href="https://google.com"> Search</a></li><br>
+
+                    </ol>
+                </div>
+                <div class="main">
+                    <h3>Search</h3>
+                    <p style="padding-bottom: 5px;">You can search various vitamins in google.</p>
+                </div>
+            </div>
+        </div>
+
     </div>
 </body>
+
 </html>
