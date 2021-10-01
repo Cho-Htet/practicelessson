@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment3</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background: url(../nv1.jpg);
+            background-attachment: fixed;
+        }
+
+        header {
+            position: relative;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 10px;
+            background: wheat;
+            box-sizing: border-box;
+            border-radius: 5px;
+            box-shadow: 4px 5px 3px rgb(88, 228, 61);
+        }
+
+        .logo {
+            height: 80px;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .nav {
+            float: right;
+        }
+
+        .navbar2 {
+            clear: both;
+        }
+
+        .nav ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav ul li {
+            list-style-type: none;
+            font-size: large;
+        }
+
+        .nav ul li a {
+            display: block;
+            margin: 10px 0;
+            padding: 20px 100px;
+            text-decoration: none;
+            color: green;
+            text-align: center;
+        }
+
+        .nav ul li a .active,
+        .nav ul li a:hover {
+            background: rgb(172, 25, 25);
+            color: moccasin;
+            transition: 0.3s;
+        }
+
+        .navbar1 {
+            display: none;
+        }
+
+        #bar1 {
+            width: 50spx;
+            height: 7.14px;
+            background-color: black;
+            margin-top: 7.14px;
+            margin-bottom: 7.14px;
+        }
+
+        #bar2 {
+            width: 50spx;
+            height: 7.14px;
+            margin-bottom: 7.14px;
+            background-color: black;
+        }
+
+        #bar3 {
+            width: 50spx;
+            height: 7.14px;
+            background-color: black;
+            margin-bottom: 7.14px;
+        }
+
+        @media(max-width:1200px) {
+            header {
+                margin: 20px;
+            }
+        }
+
+        @media (max-width:768px) {
+            .navbar1 {
+                display: block;
+                width: 50px;
+                height: 50px;
+                margin: 10px;
+                background: wheat;
+                float: right;
+                cursor: pointer;
+                text-align: center;
+                font-size: 30px;
+                color: darkgrey;
+            }
+
+            .navbar {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 50vw;
+                height: 100vh;
+            }
+
+            .position {
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+
+            ul {
+                width: 50vw;
+                height: 83vh;
+                flex-direction: column;
+                background: wheat;
+            }
+
+            .nav ul li a {
+                display: block;
+                margin: 10px 0;
+                padding: 20px 20px;
+                text-decoration: none;
+                color: rgb(48, 36, 224);
+                text-align: center;
+            }
+
+            .nav ul li a .active,
+            .nav ul li a:hover {
+                background: rgb(86, 194, 24);
+                color: rgb(128, 36, 9);
+                transition: 0.3s;
+            }
+
+            .navbar1::before {
+                content: '';
+            }
+
+            .nav {
+                display: block;
+            }
+
+            .hide {
+                left: -100%;
+                top: 0;
+            }
+
+            .navbar {
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar position">
+                <img class="logo" src="../logo.png" alt="LOGO" />
+
+                <div class="nav">
+                    <ul>
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar1" id="navbar1">
+                <div id="bar1"></div>
+                <div id="bar2"></div>
+                <div id="bar3"></div>
+            </div>
+
+            <div class="navbar2">
+
+            </div>
+
+        </div>
+    </header>
+    <script>
+        const navbar1 = document.getElementById("navbar1");
+        const navbar = document.querySelector(".navbar");
+        navbar.classList.add("hide");
+        navbar1.onclick = handleClick;
+        function handleClick(e) {
+            console.log(navbar);
+            navbar.classList.toggle("hide");
+        }
+
+    </script>
+</body>
+
+</html>
