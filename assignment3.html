@@ -17,18 +17,15 @@
 
         header {
             position: relative;
-            max-width: 1200px;
-            margin: 20px auto;
+            width: 100%;
             padding: 10px;
             background: wheat;
             box-sizing: border-box;
-            border-radius: 5px;
-            box-shadow: 4px 5px 3px rgb(88, 228, 61);
         }
 
         .logo {
             height: 80px;
-            padding: 0 20px;
+            padding: 0 20px 0 50px;
             box-sizing: border-box;
         }
 
@@ -46,7 +43,7 @@
             display: flex;
         }
 
-        .nav ul li {
+        .nav>ul>li {
             list-style-type: none;
             font-size: large;
         }
@@ -72,23 +69,23 @@
         }
 
         #bar1 {
-            width: 50spx;
-            height: 7.14px;
+            width: 40px;
+            height: 5px;
             background-color: black;
             margin-top: 7.14px;
             margin-bottom: 7.14px;
         }
 
         #bar2 {
-            width: 50spx;
-            height: 7.14px;
+            width: 40px;
+            height: 5px;
             margin-bottom: 7.14px;
             background-color: black;
         }
 
         #bar3 {
-            width: 50spx;
-            height: 7.14px;
+            width: 40px;
+            height: 5px;
             background-color: black;
             margin-bottom: 7.14px;
         }
@@ -100,19 +97,23 @@
             padding: 20px;
         }
 
-        @media(max-width:1200px) {
+        /* @media(max-width:1200px) {
             header {
                 margin: 20px;
             }
-        }
+        } */
 
         @media (max-width:768px) {
+            .logo {
+                width: 150px;
+                padding: 5px 30px 5px 30px;
+            }
+
             .navbar1 {
                 display: block;
                 width: 50px;
                 height: 50px;
                 margin: 10px;
-                background: wheat;
                 float: right;
                 cursor: pointer;
                 text-align: center;
@@ -131,46 +132,29 @@
             .position {
                 flex-direction: column;
                 justify-content: flex-start;
-                background-color: rgb(22, 235, 22);
+                background-color: wheat;
             }
-            .logo{
-                width: 150px;
-                height: 130px;
-                margin-top: 2%;
-                margin-left: 12%;
-            }
-            ul {
+
+            position>ul {
+                display: block;
                 width: 50vw;
                 height: 83vh;
                 padding-top: 7vh;
                 margin-top: 5vh;
                 flex-direction: column;
-            border-top: 2px solid white;
+                border-top: 2px solid white;
             }
 
-            .nav ul li a {
-                display: block;
-                margin: 10px 0;
-                padding: 20px 20px;
-                text-decoration: none;
-                color: white;
-                text-align: center;
+            ul {
+                flex-direction: column;
+                border-top: 1px solid white;
+                align-items: center;
             }
-
-            .nav ul li a .active,
-            .nav ul li a:hover {
-                background: rgb(66, 52, 192);
-                color: rgb(38, 228, 48);
-                transition: 0.3s;
-            }
-
+            
             .navbar1::before {
                 content: '';
             }
 
-            .nav {
-                display: block;
-            }
 
             .hide {
                 left: -100%;
@@ -181,9 +165,10 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div class="navbar position">
+
+    <div class="container">
+        <div class="navbar position">
+            <header>
                 <img class="logo" src="logo.png" alt="LOGO" />
 
                 <div class="nav">
@@ -193,19 +178,20 @@
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
-            </div>
-            <div class="navbar1" id="navbar1">
-                <div id="bar1"></div>
-                <div id="bar2"></div>
-                <div id="bar3"></div>
-            </div>
 
-            <div class="navbar2">
+            </header>
+        </div>
+        <div class="navbar1" id="navbar1">
+            <div id="bar1"></div>
+            <div id="bar2"></div>
+            <div id="bar3"></div>
+        </div>
 
-            </div>
+        <div class="navbar2">
 
         </div>
-    </header>
+
+    </div>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur sint ipsa incidunt autem, soluta ullam nisi
         excepturi amet perspiciatis dolor hic nobis ipsam ab asperiores inventore? Voluptatibus assumenda, aspernatur
         exercitationem, quia corporis explicabo voluptate laudantium recusandae quod aut quo veritatis vitae magnam iste
