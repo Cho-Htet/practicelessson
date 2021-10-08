@@ -133,24 +133,22 @@
                 justify-content: flex-start;
                 background-color: rgb(22, 235, 22);
             }
-
-            .logo {
+            .logo{
                 width: 150px;
                 height: 130px;
                 margin-top: 2%;
                 margin-left: 12%;
             }
-
             ul {
                 width: 50vw;
                 height: 83vh;
                 padding-top: 7vh;
                 margin-top: 5vh;
                 flex-direction: column;
-                border-top: 2px solid white;
+            border-top: 2px solid white;
             }
 
-            .position ul li a {
+            .nav ul li a {
                 display: block;
                 margin: 10px 0;
                 padding: 20px 20px;
@@ -159,8 +157,8 @@
                 text-align: center;
             }
 
-            .position ul li a .active,
-            .position ul li a:hover {
+            .nav ul li a .active,
+            .nav ul li a:hover {
                 background: rgb(66, 52, 192);
                 color: rgb(38, 228, 48);
                 transition: 0.3s;
@@ -170,8 +168,8 @@
                 content: '';
             }
 
-            header {
-                display: none;
+            .nav {
+                display: block;
             }
 
             .hide {
@@ -183,10 +181,9 @@
 </head>
 
 <body>
-
-    <div class="container">
-        <div class="navbar position">
-            <header>
+    <header>
+        <div class="container">
+            <div class="navbar position">
                 <img class="logo" src="logo.png" alt="LOGO" />
 
                 <div class="nav">
@@ -196,20 +193,19 @@
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
+            </div>
+            <div class="navbar1" id="navbar1">
+                <div id="bar1"></div>
+                <div id="bar2"></div>
+                <div id="bar3"></div>
+            </div>
 
-            </header>
+            <div class="navbar2">
+
+            </div>
+
         </div>
-        <div class="navbar1" id="navbar1">
-            <div id="bar1"></div>
-            <div id="bar2"></div>
-            <div id="bar3"></div>
-        </div>
-
-        <div class="navbar2">
-
-        </div>
-
-    </div>
+    </header>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur sint ipsa incidunt autem, soluta ullam nisi
         excepturi amet perspiciatis dolor hic nobis ipsam ab asperiores inventore? Voluptatibus assumenda, aspernatur
         exercitationem, quia corporis explicabo voluptate laudantium recusandae quod aut quo veritatis vitae magnam iste
