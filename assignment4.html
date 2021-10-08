@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(rgb(169, 189, 197), rgb(239, 246, 248));
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 30px;
+        }
+
+        .container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: scroll;
+        }
+
+        .wrapper {
+            position: fixed;
+            width: 100vw;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .navbar {
+            width: 90%;
+            display: flex;
+            height: 100%;
+            align-items: center;
+            white-space: nowrap;
+        }
+
+
+        .brand {
+            width: 250px;
+            padding-right: 20px;
+        }
+
+        .brand1 {
+            display: none;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+        }
+
+        ul>li {
+            list-style-type: none;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        ul>li>a {
+            text-decoration: none;
+            color: gray;
+            padding: 0 20px 0 20px;
+            text-align: center;
+            transition-duration: 1s;
+        }
+
+        ul>li>a:hover {
+            color: #14ec0d;
+            text-decoration: 2px underline rgb(46, 146, 46);
+        }
+
+        .hamburger-wrapper {
+            display: none;
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
+
+        .box {
+            background-color: rgb(8, 122, 65);
+            padding-top: 100px;
+        }
+
+        .cat {
+            text-align: center;
+            padding-top: 45px;
+            padding-bottom: 50px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 600;
+            font-size: 30px;
+            color: #fff;
+            height: 22%;
+        }
+
+        @media screen and (max-width:480px) {
+
+            .wrapper {
+                position: fixed;
+                height: 6vh;
+                width: 100%;
+            }
+
+            .brand1 {
+                width: 200px;
+                display: inline-block;
+                padding: 10px 30px 10px 10px;
+            }
+
+            .navbar {
+                flex-direction: column;
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                align-items: flex-start;
+                height: unset;
+                width: 100%;
+                background-color: white;
+            }
+
+            .brand {
+                padding: 10px 30px 10px 10px;
+                width: 200px;
+                height: 50px;
+            }
+
+            ul {
+                flex-direction: column;
+                width: 100%;
+                background-color: white;
+                align-items: flex-start;
+            }
+
+            ul>li {
+                line-height: 26px;
+                border-top: 0.5px solid rgb(153, 140, 140);
+                width: 100%;
+            }
+
+            ul>li>a {
+                width: 100%;
+                line-height: 50px;
+                text-align: left;
+            }
+
+            .hamburger-wrapper {
+                display: block;
+                position: relative;
+                margin-left: auto;
+            }
+
+            .hamburger {
+                position: fixed;
+                width: 25px;
+                right: 10px;
+                transform: translateY(-50%);
+            }
+
+            .box {
+                padding-top: 6vh;
+            }
+
+            .cat {
+                text-align: center;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 600;
+                font-size: 30px;
+                color: #fff;
+                height: 85px;
+                padding-top: 26px;
+                padding-bottom: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <img class="brand1" src="zone1.jpg" alt="brand" />
+            <div class="navbar">
+                <img class="brand" src="zone1.jpg" alt="brand" />
+                <ul>
+                    <li><a href="#">Weekly Quiz</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Hire Team</a></li>
+                    <li><a href="#">Guest Post</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <button class="hamburger-wrapper">
+                <img class="hamburger" src="bars.svg" alt="hamburger button" />
+            </button>
+        </div>
+        <div class="box">
+            <p class="cat">Category : Spring Boot</p>
+        </div>
+        <p style="padding-top: 10%;">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, at reprehenderit tenetur culpa nam impedit
+            incidunt blanditiis ipsum odio quos vitae deleniti quibusdam nostrum doloremque deserunt, asperiores alias
+            temporibus ab repellat? Ea, saepe assumenda ullam, dolores molestias explicabo unde ad maxime accusantium
+            dolor quaerat autem! Ratione adipisci, aut illo obcaecati dolor veniam a harum sunt ducimus repellat,
+            necessitatibus veritatis laboriosam voluptatem nemo ullam quod quos at? Aliquam autem est eum. Alias
+            incidunt explicabo ea. Omnis sapiente tempore fuga, et officiis voluptatum nam consequatur, error velit
+            assumenda doloribus labore quisquam quod quam pariatur! Quasi repellendus asperiores, atque a debitis
+            consectetur optio enim iste officiis praesentium consequatur soluta quisquam earum aperiam hic, tenetur, ab
+            delectus qui? Ratione, obcaecati quos repellendus nam id dicta dolorum ea soluta excepturi est odio, cumque
+            sint iure voluptatibus et quod dolore eveniet ipsa hic similique at. Unde quam adipisci, eligendi dolores
+            veritatis rem odio doloribus labore, voluptatibus porro odit nobis quia architecto autem, laudantium error
+            corporis beatae praesentium hic assumenda. Deleniti magni pariatur necessitatibus fugit doloremque, quod
+            laboriosam recusandae id iure, dignissimos error sapiente, amet perspiciatis quos ad? Alias, perspiciatis
+            nobis. Inventore voluptate, blanditiis, illo dolore officiis repudiandae velit repellat alias, laudantium
+            labore voluptatibus aspernatur suscipit nihil.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Perferendis, omnis quisquam quidem totam
+            voluptatibus similique dolorum doloribus aspernatur quia dolores, obcaecati, doloremque vel tempore?
+            Inventore explicabo impedit, nam magni corrupti harum tempore, repellat itaque quisquam amet exercitationem
+            quo molestiae rem expedita dolores magnam quae maxime excepturi officia vitae voluptas. Voluptatibus enim
+            quidem labore pariatur architecto excepturi consequatur sequi nihil id reprehenderit. Aperiam dicta magni
+            eligendi, temporibus assumenda quos saepe repudiandae architecto quae officia beatae dolorum rem pariatur
+            fuga facere ducimus perspiciatis incidunt modi? Modi, nihil! Maiores omnis eum consectetur sequi quisquam
+            cupiditate nesciunt dolor natus. Ad veniam, corporis iusto atque, inventore molestiae quisquam temporibus
+            totam dicta reprehenderit non nam dolorem sunt blanditiis consectetur eos adipisci labore qui? Repellendus
+            impedit, recusandae amet aliquam harum adipisci, quisquam magnam ex totam consequatur officia unde
+            voluptatibus ratione necessitatibus veniam eius earum beatae fugiat obcaecati! Fuga beatae suscipit quos
+            totam quaerat necessitatibus magnam explicabo doloribus ut, excepturi quae perferendis nihil est sint eos
+            laudantium a unde minus omnis. Animi, doloremque. Totam, laboriosam. Quasi pariatur quos totam, ad soluta
+            reiciendis nam velit officiis, saepe rerum excepturi earum illum quis iste eaque itaque culpa consequuntur
+            est mollitia! Minima mollitia assumenda voluptatum quos beatae dolorum at laborum inventore?
+        </p>
+    </div>
+    <script>
+        const hamburgerButton = document.querySelector('.hamburger');
+        hamburgerButton.addEventListener('click', function () {
+            const navbar = document.querySelector('.navbar');
+            const navbarStyle = navbar.style;
+            if (navbarStyle.getPropertyValue('display') === "none") {
+                navbarStyle.setProperty('display', 'flex');
+            }
+            else {
+                navbarStyle.setProperty('display', 'none');
+            }
+        });
+    </script>
+</body>
+
+</html>
