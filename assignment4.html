@@ -14,7 +14,7 @@
         }
 
         body {
-            background: linear-gradient(rgb(169, 189, 197), rgb(239, 246, 248));
+            /* background: linear-gradient(rgb(239, 246, 248), rgb(245, 248, 250)); */
             font-size: 16px;
             font-weight: 400;
             line-height: 30px;
@@ -38,21 +38,25 @@
         }
 
         .navbar {
-            width: 90%;
+            position: absolute;
+            width: 100%;
             display: flex;
             height: 100%;
+            padding: 40px;
             align-items: center;
             white-space: nowrap;
+            box-shadow: 3px 3px 3px rgb(180, 156, 218);
         }
 
 
         .brand {
-            width: 250px;
-            padding-right: 20px;
+            width: 300px;
+            padding-right: 40px;
         }
 
         .brand1 {
             display: none;
+            /* padding-right: 20px; */
         }
 
         ul {
@@ -68,14 +72,15 @@
         ul>li>a {
             text-decoration: none;
             color: gray;
-            padding: 0 20px 0 20px;
+            padding: 0 25px;
             text-align: center;
             transition-duration: 1s;
         }
 
         ul>li>a:hover {
-            color: #14ec0d;
-            text-decoration: 2px underline rgb(46, 146, 46);
+            color: #1d9b19;
+            border-bottom: 3px solid rgb(8, 83, 8);
+            border-bottom-style: outset;
         }
 
         .hamburger-wrapper {
@@ -85,28 +90,46 @@
             outline: none;
         }
 
-        .box {
-            background-color: rgb(8, 122, 65);
-            padding-top: 100px;
+        p {
+            padding-top: 15%;
         }
 
-        .cat {
-            text-align: center;
-            padding-top: 45px;
-            padding-bottom: 50px;
-            font-family: 'Roboto', sans-serif;
-            font-weight: 600;
-            font-size: 30px;
-            color: #fff;
-            height: 22%;
+        @media screen and (max-width:1200px) {
+            .wrapper {
+                position: fixed;
+                box-shadow: 3px 3px 3px rgb(162, 135, 212);
+            }
+
+            .navbar {
+                position: absolute;
+                width: 100%;
+                display: flex;
+                height: 100%;
+                padding: 40px;
+                align-items: center;
+                white-space: nowrap;
+
+            }
+
+            .brand {
+                width: 200px;
+                padding-right: 20px;
+            }
+
+            ul>li>a {
+                padding: 0 20px;
+            }
+
+
         }
 
-        @media screen and (max-width:480px) {
+        @media screen and (max-width:950px) {
 
             .wrapper {
                 position: fixed;
                 height: 6vh;
                 width: 100%;
+                box-shadow: 3px 3px 3px rgb(168, 147, 226);
             }
 
             .brand1 {
@@ -125,6 +148,7 @@
                 height: unset;
                 width: 100%;
                 background-color: white;
+                padding: 1px;
             }
 
             .brand {
@@ -142,7 +166,7 @@
 
             ul>li {
                 line-height: 26px;
-                border-top: 0.5px solid rgb(153, 140, 140);
+                border-top: 0.5px solid rgb(238, 232, 232);
                 width: 100%;
             }
 
@@ -163,22 +187,10 @@
                 width: 25px;
                 right: 10px;
                 transform: translateY(-50%);
+                /* top: 25%; */
             }
 
-            .box {
-                padding-top: 6vh;
-            }
 
-            .cat {
-                text-align: center;
-                font-family: 'Roboto', sans-serif;
-                font-weight: 600;
-                font-size: 30px;
-                color: #fff;
-                height: 85px;
-                padding-top: 26px;
-                padding-bottom: 28px;
-            }
         }
     </style>
 </head>
@@ -186,7 +198,7 @@
 <body>
     <div class="container">
         <div class="wrapper">
-            <img class="brand1" src="zone1.jpg" alt="brand" />
+            <img class="brand1" src="zone1.jpg" alt="brand1" />
             <div class="navbar">
                 <img class="brand" src="zone1.jpg" alt="brand" />
                 <ul>
@@ -203,10 +215,8 @@
                 <img class="hamburger" src="bars.svg" alt="hamburger button" />
             </button>
         </div>
-        <div class="box">
-            <p class="cat">Category : Spring Boot</p>
-        </div>
-        <p style="padding-top: 10%;">
+
+        <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, at reprehenderit tenetur culpa nam impedit
             incidunt blanditiis ipsum odio quos vitae deleniti quibusdam nostrum doloremque deserunt, asperiores alias
             temporibus ab repellat? Ea, saepe assumenda ullam, dolores molestias explicabo unde ad maxime accusantium
@@ -236,7 +246,22 @@
             totam quaerat necessitatibus magnam explicabo doloribus ut, excepturi quae perferendis nihil est sint eos
             laudantium a unde minus omnis. Animi, doloremque. Totam, laboriosam. Quasi pariatur quos totam, ad soluta
             reiciendis nam velit officiis, saepe rerum excepturi earum illum quis iste eaque itaque culpa consequuntur
-            est mollitia! Minima mollitia assumenda voluptatum quos beatae dolorum at laborum inventore?
+            est mollitia! Minima mollitia assumenda voluptatum quos beatae dolorum at laborum inventore? Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Blanditiis magnam, tempora voluptatem voluptas esse quas,
+            minima odit, nesciunt tenetur eius facilis! Illo quos, quis facere rerum natus voluptatibus et, harum quidem
+            necessitatibus ullam quas. Expedita unde molestiae rem voluptas, eum necessitatibus eius animi qui eveniet
+            nisi reprehenderit, iure fugit a. Quae fuga sint aperiam molestias voluptatum est, provident expedita
+            quidem, impedit numquam eveniet blanditiis amet excepturi voluptatem pariatur? Facilis, itaque corporis
+            maxime voluptates repellendus inventore. Qui, distinctio placeat, earum ab optio temporibus provident
+            voluptates maxime vel laudantium, quidem voluptas. Omnis quidem ipsum et tempore nulla quaerat maiores
+            architecto vero impedit velit. Odio similique accusantium eum tempore voluptas illum quis unde fugit ipsum
+            neque eveniet hic perferendis veritatis quas, iste deleniti repudiandae dolorum doloribus, excepturi quam
+            repellendus possimus. Velit, vitae. Quasi accusamus officiis, consequuntur aperiam molestias sunt et natus,
+            minus odio vitae quo neque similique ea corporis quam? Labore consectetur eveniet doloremque sed ut!
+            Voluptas ex dolore corporis dolores quis illo placeat a neque ratione. Esse odio ex ab voluptates non!
+            Laudantium cum, quaerat nesciunt placeat, alias illum inventore molestias voluptates aspernatur illo
+            voluptate magni unde nam mollitia, enim ducimus minima consectetur! Nam mollitia error facilis quo similique
+            facere nemo odit?
         </p>
     </div>
     <script>
